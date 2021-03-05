@@ -19,7 +19,8 @@ namespace MyShop.WebUI.Controllers
         public ActionResult Index()
         {
             var model = basketService.GetBasketItems(this.HttpContext);
-            return View();
+            
+            return View(model);
         }
 
         public ActionResult AddToBasket(string Id)
